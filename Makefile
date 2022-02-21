@@ -1,5 +1,6 @@
 obj-m += clevo-xsm-wmi.o
-KDIR := /lib/modules/$(shell uname -r)/build
+KERNEL_UNAME ?= $(shell uname -r)
+KDIR := /lib/modules/$(KERNEL_UNAME)/build
 PWD := $(shell pwd)
 #CFLAGS_clevo-xsm-wmi.o := -DDEBUG
 
